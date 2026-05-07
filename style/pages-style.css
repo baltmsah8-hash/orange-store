@@ -23,19 +23,12 @@ header h2 {
 /*start section*/
 
 main section {
-  height: 160vh;
   width: 100%;
   margin-bottom: 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-}
-
-@media (max-width: 375px) {
-  main section {
-    min-height: 160vh;
-  }
 }
 
 main section h3 {
