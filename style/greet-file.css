@@ -1,0 +1,124 @@
+:root {
+  --bg-color: #F8F9FA;
+  --bk-color: #FF8000;
+  --link:#0086ff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --btn1: #FFAF00;
+  --btn2: #FFEC00;
+  --head: rgba(0, 0, 0, 0.8);
+  --text: rgba(0, 0, 0, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../assets/font/Rubik-Bold.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../assets/font/Rubik-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text);
+  user-select: none;
+}
+
+h2, h3 {
+  font-weight: bold;
+  color: var(--head);
+}
+
+p {
+  color: var(--text);
+}
+
+span {
+  font-weight: bold;
+  color: var(--text);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon-size {
+  height: 35px;
+  width: 35px;
+}
+
+.icon-guide {
+  height: 25px;
+  width: 25px;
+}
+
+.card {
+  height: 400px;
+  width: 200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 5px 20px rgba(1, 10, 1, 0.050);
+}
+
+.card::before {
+  content: 'sale';
+  position: absolute;
+  top: px;
+  right: 10px;
+  height: 20px;
+  width: 40px;
+  padding-top: 2px;
+  background-color: #FF0000;
+  color: #000;
+  text-align: center;
+  border-radius: 24px;
+}
+.image {
+  height: 50%;
+  width: 100%;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+}
+
+.pricing {
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: end;
+}
+
+main section .container .card .pricing span {
+  margin: auto 5px;
+}
+
+main section .container .card .pricing input {
+  margin: auto 5px;
+}

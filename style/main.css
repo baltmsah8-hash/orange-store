@@ -1,1 +1,393 @@
+/*start header*/
+header {
+  height: 4rem;
+  width: 80%;
+  position: fixed;
+  left: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 55;
+}
 
+header::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+header nav .bars {
+  transition: all 0.5s;
+}
+
+header nav .bars:hover {
+  transform: rotate(1turn);
+}
+
+
+header nav ul {
+  height: 100vh;
+  width: 40%;
+  position: absolute;
+  top: 0px;
+  left: -150%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 1px 10px 40px var(--shadow);
+  transition: all 0.5s;
+  z-index: 0;
+}
+
+header nav ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20%;
+  width: 100%;
+  background-color: var(--bk-color);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 0;
+}
+
+header nav .bars:hover + ul,
+header nav ul:hover {
+  left: -13%;
+}
+
+
+header nav ul li a .user {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  border: 2px solid var(--bg-color);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+header nav ul li a {
+  display: flex;
+  align-items: center;
+  color: var(--link);
+  font-weight: bold;
+}
+
+header nav ul li a span {
+  margin-left: 4px;
+}
+
+@media (max-width: 375px) {
+  header nav ul li a span {
+    display: none;
+  }
+}
+
+header nav ul li a img {
+  height: 25px;
+}
+
+header .icon-box {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 375px) {
+  header .icon-box {
+    width: 30%;
+  }
+}
+
+header .icon-box .glass {
+  padding-left: 5px;
+  border-left: 3px solid #000;
+  border-radius: 5px;
+}
+
+/*end header*/
+/*start home*/
+
+#home {
+  height: 100vh;
+  padding: 5px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90%;
+  width: 100%;
+  background: linear-gradient(to right, #FF9400, #FF6800);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 1px 10px 30px var(--shadow);
+  z-index: -1;
+}
+
+@media (max-width: 375px) {
+  #home {
+    height: 80vh;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  #home .things {
+    justify-content: space-evenly;
+  }
+}
+
+#home .text {
+  height: 100px;
+  min-width: 200px;
+  padding: 0px auto;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#home .text p{
+  font-weight: bold;
+}
+
+#home .things {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  #home .things {
+    justify-content: center;
+  }
+}
+
+
+#home .things img {
+  height: 15rem;
+  width: 90%;
+  border-radius: 24px;
+  box-shadow: 1px 10px 30px var(--shadow);
+  -webkit-mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 50%, transparent 100%);
+}
+
+#home .things a {
+  height: 2rem;
+  width: 90%;
+  padding-top: 5px;
+  margin-top: 15px;
+  background: var(--btn1);
+  color: #000;
+  font-weight: bold;
+  border-radius: 20px;
+  text-align: center;
+  transition: 1s;
+}
+
+#home .things a:hover {
+  background-color: #FFFA00;
+}
+
+/*end home*/
+/*start div*/
+
+#products {
+  height: 6rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#products::before {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: 5%;
+  height: 60%;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #FFAF00;
+  z-index: -1;
+}
+
+/*end div*/
+/*start main*/
+
+main section {
+  margin: 40px;
+}
+
+main section h2 {
+  height: 2rem;
+  width: 100%;
+  margin: 10px auto 30px;
+  font-size: 30px;
+  text-align: center;
+}
+
+main section a {
+  position: relative;
+  margin: 10px 20px;
+  color: var(--link);
+  font-size: 20px;
+}
+
+main section a::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: -12px;
+  height: 15px;
+  width: 15px;
+  border: 5px solid var(--link);
+  border-left: none;
+  border-top: none;
+  border-radius: 5px;
+  transform: rotate(135deg);
+}
+
+main section .container {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: scroll;
+}
+
+main section .container .card .image img {
+  border-radius: 10px;
+}
+
+@media (max-width: 375px) {
+  main section a {
+    height: 3rem;
+    width: 100%;
+    margin: 10px auto;
+    text-align: left;
+  }
+  main section .container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main section .container .card {
+    height: 320px;
+  }
+}
+
+/*end main*/
+/*start footer*/
+
+footer {
+  height: 30vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+  '. brand .'
+  'logo brand foot'
+  '. brand .';
+  background-color: #000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 1px 10px 30px var(--shadow);
+}
+
+footer .my-logo {
+  grid-area: logo;
+  margin: auto 2rem;
+}
+
+@media (min-width: 768px) {
+  footer .my-logo {
+    margin: auto;
+  }
+}
+
+footer .my-logo h3 {
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+  border: 1px solid #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: var(--bk-color);
+  border-radius: 50%;
+}
+
+footer .brands {
+  grid-area: brand;
+  height: 80%;
+  margin:  auto 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+
+footer .brands a {
+  margin: 10px 1rem;
+  color: #fff;
+  opacity: 0.8;
+  font-weight: bold;
+}
+
+footer .foot {
+  grid-area: foot;
+  margin: auto;
+}
+
+footer .foot p {
+  color: #fff;
+  font-weight: bold;
+}
+
+footer .foot p a {
+  color: var(--link);
+}
+
+@media (max-width: 375px) {
+  footer {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .my-logo {
+    margin: 20px auto;
+  }
+  footer .brands {
+    text-align: center;
+  }
+  footer .foot {
+    margin-bottom: 10px;
+  }
+}
+
+
+/*end footer*/
